@@ -154,7 +154,7 @@ body {
 .hero {
     background-color: #2e2f42;
     padding: 188px 0;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-clip: border-box;
@@ -322,11 +322,6 @@ body {
     margin-bottom: 8px;
 }
 
-.our-team-icon-container {
-    display: flex;
-    column-gap: 24px;
-}
-
 /* ========== Portfolio-section styles ========== */
 .portfolio-title {
     font-size: 36px;
@@ -365,9 +360,7 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 40px;
+    padding: 40px 32px;
     font-size: 16px;
     overflow: auto;
     position: absolute;
@@ -481,7 +474,7 @@ body {
 
 .footer-container {
     display: flex;
-    justify-content: baseline;
+    align-items: baseline;
 }
 
 .footer-logo-content {
