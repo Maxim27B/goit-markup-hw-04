@@ -544,8 +544,8 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500
 }
 
 .footer-subscribe-btn:hover,
@@ -554,6 +554,7 @@ textarea {
 }
 
 .footer-subscribe-icon {
+    margin-left: 16px;
     fill: #ffffff;
 }
 
@@ -595,29 +596,31 @@ textarea {
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 24px;
     align-items: center;
-    padding: 0;
+    top: 24px;
     right: 24px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
     border: none;
-    padding: 8px;
     border-radius: 50%;
     background-color: #e7e9fc;
     stroke: rgba(0, 0, 0, 0.1);
     fill: #2e2f42;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:focus,
 .modal-close-btn:hover {
     fill: #ffffff;
     background-color: #404bbf;
+    border: none
 }
 
 .modal-close-btn-icon {
     display: block;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title {
