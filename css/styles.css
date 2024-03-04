@@ -417,7 +417,6 @@ textarea {
 .footer-container {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
 }
 
 .footer-logo {
@@ -463,7 +462,6 @@ textarea {
     margin-bottom: 16px;
 }
 
-
 .footer-icon-list {
     display: flex;
     justify-content: center;
@@ -496,48 +494,45 @@ textarea {
     margin-right: 120px;
 }
 
+/* ========== Subscribe-box styles ========== */
 
+.footer-subscribe-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
 
-.subscribe-container {
+.subscribe-form {
     display: flex;
     gap: 24px;
     justify-content: space-between;
 }
 
-.footer-input-label {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #fff;
-    margin-bottom: 16px;
-    display: block;
-}
-
 .footer-input {
-    border: 1px solid #fff;
+    border: 1px solid #ffffff;
     border-radius: 4px;
     width: 264px;
     height: 40px;
     background-color: transparent;
     padding: 8px 16px;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #f4f4fd;
-}
-
-.footer-input::placeholder {
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
+    color: #ffffff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.footer-input::placeholder {
     color: #ffffff;
 }
 
 .footer-subscribe-btn {
     border-radius: 4px;
     padding: 8px 24px;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
     background-color: #4d5ae5;
     font-size: 16px;
@@ -583,10 +578,8 @@ textarea {
 }
 
 .modal {
-    padding-bottom: 24px;
-    padding-top: 73px;
-    padding-left: 24px;
-    padding-right: 24px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -595,20 +588,26 @@ textarea {
     width: 408px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #fcfcfc;
-
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
     position: absolute;
-    top: 25px;
+    display: flex;
+    justify-content: center;
+    top: 24px;
+    align-items: center;
+    padding: 0;
     right: 24px;
     border: none;
     padding: 8px;
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: #e7e9fc;
     stroke: rgba(0, 0, 0, 0.1);
     fill: #2e2f42;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:focus,
@@ -635,10 +634,14 @@ textarea {
     margin-bottom: 8px;
 }
 
+.contacts-form-input-wrapper-last {
+    margin-bottom: 16px;
+}
+
 .contacts-form-label {
     display: block;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
     margin-bottom: 4px;
@@ -663,12 +666,13 @@ textarea {
     width: 100%;
     height: 40px;
     padding-left: 38px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: transparent;
+    background-color: transparent;
 }
 
 .contacts-form-input:focus {
     border-color: #4d5ae5;
-    outline: transparent;
 }
 
 .contacts-form-input:focus+.input-field-icon {
@@ -683,7 +687,12 @@ textarea {
     resize: none;
     padding: 8px 16px;
     outline: transparent;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
 }
 
 .form-textarea:focus {
@@ -703,7 +712,7 @@ textarea {
 
 .privacy-checkbox-label {
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
 }
@@ -715,8 +724,8 @@ textarea {
     height: 16px;
     width: 16px;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     align-items: center;
     justify-content: center;
     fill: transparent;
@@ -726,7 +735,7 @@ textarea {
 .form-privacy-checkbox:checked+.privacy-checkbox-label .form-privacy-own-checkbox {
     background-color: #404bbf;
     fill: #f4f4fd;
-    border-color: #404bbf;
+    border: none;
 }
 
 .form-privacy-checkbox:focus+.privacy-checkbox-label .form-privacy-own-checkbox {
@@ -751,4 +760,12 @@ textarea {
     color: #ffffff;
     border: none;
     margin: 0 auto;
+    min-width: 169px;
+    font-weight: 500;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-submit-btn:hover,
+.form-submit-btn:focus {
+    background-color: #404bbf
 }
